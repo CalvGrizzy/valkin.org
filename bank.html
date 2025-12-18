@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How to Make a Perfect Bank — Orbital Bank Thought Experiment</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa6bd;
+      --accent: #7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      height:auto;
+      min-height:100%;
+    }
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(125,211,252,0.06), transparent),
+                  radial-gradient(1000px 400px at 90% 90%, rgba(99,102,241,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:60px 24px 40px;
+      display:block; /* changed from flex to block */
+      overflow-y:auto;
+    }
+
+    .container{
+      width:100%;
+      max-width:950px;
+      margin:0 auto; /* centers it horizontally */
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      border: 1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    header{
+      display:flex;
+      align-items: flex-start;
+      gap:18px;
+      margin-top:10px;
+    }
+
+    .eyebrow{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background: linear-gradient(90deg, rgba(125,211,252,0.06), rgba(99,102,241,0.04));
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      font-weight:700;
+    }
+
+    h1{margin:0;font-size:22px;line-height:1.12}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+
+    .content{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 300px;
+      gap:20px;
+    }
+
+    .article{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      padding:20px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    article p{color:#d9e7ff;line-height:1.65;margin:0 0 14px 0}
+    article strong{color:#fff}
+
+    blockquote{
+      margin:14px 0;
+      padding:14px 16px;
+      border-left:4px solid rgba(125,211,252,0.18);
+      background:linear-gradient(180deg, rgba(125,211,252,0.02), rgba(125,211,252,0.01));
+      color:#eaf8ff;
+      border-radius:8px;
+      font-style:normal;
+      font-size:15px;
+    }
+
+    .aside{
+      padding:18px;
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border:1px solid rgba(255,255,255,0.02);
+      height:fit-content;
+    }
+
+    .aside h3{margin:0 0 8px 0;font-size:15px}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px;margin:6px 6px 0 0}
+
+    .foot{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,rgba(125,211,252,0.06),transparent);border:1px solid rgba(125,211,252,0.08);cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;text-decoration:none
+    }
+
+    .muted{color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .content{grid-template-columns:1fr}
+      .aside{order:2}
+    }
+
+    .marker{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    .highlight{background:linear-gradient(90deg, rgba(125,211,252,0.08), rgba(99,102,241,0.03));padding:6px 8px;border-radius:6px;color:var(--accent);font-weight:700}
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div style="flex:1">
+        <div class="eyebrow">Thought Experiment</div>
+        <h1>How to Make a Perfect Bank - SPACE!!!</h1>
+        <div class="meta">A short exploration of a comment from <em>r/AskReddit</em> that imagines a bank in orbit. Includes analysis and potential flaws.</div>
+      </div>
+      <div style="width:120px;text-align:right">
+        <div class="marker">By</div>
+        <div style="font-weight:700;margin-top:6px">Me</div>
+        <div class="muted" style="margin-top:6px">Oct 26, 2025</div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="article" aria-labelledby="article-heading">
+        <h2 id="article-heading" style="margin-top:0;font-size:16px">Here is the problem</h2>
+        <p><strong>How do you make a perfect bank?</strong> In today's world, banks are used to hold our representation of effort — money. However, how do you protect that money? This is the question I asked on <em>r/AskReddit</em>, and one comment stood out to me.</p>
+
+        <blockquote>
+          "Put the bank in orbit. It only deals with digital currency. All communications are done with precision laser from ground stations on the earth. Each transaction takes 10 days, requires multiple satellite passes and if the signal is intercepted the transaction is void.
+          <br><br>
+          No internet is required for communication to and from the satellite, they are completely offline.
+          <br><br>
+          If you wish to make a transaction you must visit a ground station and provide biometric authentication. This is your eyes, fingerprint and blood (DNA, visual ai must see you take the blood sample)
+          <br><br>
+          This bank is not open to general customers, it is by invitation only.
+          <br><br>
+          Thing is, this bank could exist with today’s technology, there is no way to prove it doesn’t."
+          <div style="margin-top:10px;font-size:12px;color:var(--muted)">— u/alexkirwan11 (excerpt)</div>
+        </blockquote>
+
+        <p>And this is an interesting idea. This bank would work well, very well in fact. However, I did notice some flaws..</p>
+
+        <h3 style="margin-top:12px">Good thoughts</h3>
+        <p>Next to unhackable. No access to internet, physical interaction, high security.</p>
+
+        <h3 style="margin-top:12px">Potential flaws</h3>
+        <p>People are the big one. Human interaction means flaws. Here are two of the main ones:</p>
+
+        <ul>
+          <li><strong>Corpse / spoofing of DNA:</strong> Fingerprints can be spoofed, blood collected, and dead people still have eyes. The main defense from this is the camera, but even that has flaws.</li>
+          <li><strong>Gunpoint:</strong> Being held at gunpoint could be a possible bypass. To avoid it, guards are required, which can take away the hiddenness of the previous design, especially if the terminal is in the open.</li>
+        </ul>
+
+        <p>These all stem from the same base problem. People are imperfect, and with enough time anything is possible. Including making a perfect bank, but hopefully not breaking into one. So, here are some ideas to fix some problems.</p>
+
+        <h3 style="margin-top:12px">Fixes</h3>
+        <p>Some ways to strengthen the design include:</p>
+        <ul>
+          <li>Require test of life, like actions to be completed, problems to be solved.</li>
+          <li>Use 2FA or even more than 2 for larger withdrawals or any at all.</li>
+          <li>Timing is key; hidden info can be used against a robber.</li>
+        </ul>
+
+        <p>Even with these protections, perhaps a perfect bank is impossible, and struggling is useless. However, it is fun.</p>
+
+        <h3 style="margin-top:12px">Final thoughts</h3>
+        <p>Overall, the idea could work in today's world, and it would be quite secure. I shall continue to think on it, and update when I have more ideas.</p>
+
+        <footer class="foot">
+          <div class="muted">Originally inspired by a comment on r/AskReddit by <a href="https://www.reddit.com/user/alexkirwan11/">u/alexkirwan11</a> — adapted into an article.</div>
+          <a class="btn" href="#" onclick="toggleHighlight();return false;">Toggle quote highlight</a>
+        </footer>
+      </div>
+
+      <aside class="aside" aria-label="Sidebar">
+        <h3>Quick notes</h3>
+        <div class="chip">Offline satellites</div>
+        <div class="chip">Biometric + DNA</div>
+        <div class="chip">Invitation only</div>
+        <div style="margin-top:12px" class="muted">Key concerns:</div>
+        <ol style="margin:8px 0 0 18px;color:#d6e9ff">
+          <li>Biometric spoofing</li>
+          <li>Coercion &amp; physical threat</li>
+          <li>Operational exposure (guards, stations)</li>
+        </ol>
+
+        <div style="margin-top:14px">
+          <h3 style="margin-bottom:6px">Share</h3>
+          <a class="btn" href="#" onclick="navigator.clipboard?.writeText(window.location.href).then(()=>alert('Link copied')) ;return false;">Copy link</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    function toggleHighlight(){
+      const bq = document.querySelector('blockquote');
+      if(!bq) return;
+      bq.style.transition = 'all 360ms ease';
+      if(bq.style.filter === 'saturate(1.2)'){
+        bq.style.filter = '';
+        bq.style.boxShadow = '';
+      } else {
+        bq.style.filter = 'saturate(1.2)';
+        bq.style.boxShadow = '0 8px 30px rgba(125,211,252,0.06)';
+      }
+    }
+  </script>
+</body>
+</html>
