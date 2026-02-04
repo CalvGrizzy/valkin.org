@@ -31,6 +31,7 @@ a:hover {
   padding-left: 1em;
 }
 .green {
+  vertical-align: text-bottom;
   color: rgb(0, 255, 128);
   text-shadow: 0 0 8px rgba(0, 255, 128, 0.5);
 }
