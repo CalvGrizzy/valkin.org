@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background-color: black;
+        }
+        p {
+            font-family:'Courier New', Courier, monospace;
+            color: rgb(0, 255, 30);
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .plant {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="plant" onmouseenter="typeWriter()" onmouseleave="hideWriter()" onclick="window.location.href='https://valkin.org'">
+        <p>><span id="typing-text"></span><span class="blink">_</span></p>
+    </div>
+    <script>
+        var i = 0;
+        var txt = 'VALKIN.ORG';
+        var speed = 50;
+        var timeoutId = null;
+
+        function typeWriter() {
+            clearTimeout(timeoutId);
+            if (i < txt.length) {
+                document.getElementById("typing-text").innerHTML = txt.substring(0, i + 1);
+                i++;
+                timeoutId = setTimeout(typeWriter, speed);
+            }
+        }
+        
+        function hideWriter() {
+            clearTimeout(timeoutId);
+            if (i > 0) {
+                i--;
+                document.getElementById("typing-text").innerHTML = txt.substring(0, i);
+                timeoutId = setTimeout(hideWriter, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>

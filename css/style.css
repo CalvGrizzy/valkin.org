@@ -41,7 +41,7 @@ dt {
 /* The sidebar menu */
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
+  width: 10%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -82,6 +82,7 @@ dt {
   padding-right: 3px;
   transition: transform 0.2s ease;
   color: rgb(194, 0, 194);
+  margin-left: 1%;
 }
 
 .back:hover {
