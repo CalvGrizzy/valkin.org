@@ -17,13 +17,13 @@ h6 {
   letter-spacing: 1px;
 }
 a {
-  color: #b11dcb;
+  color: #a14fff;
   text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 8px rgba(224, 0, 224, 0.778);
+  color: #6c6fff;
+  text-shadow: 0 0 8px rgba(7, 0, 224, 0.778);
 }
 * {
   transition: all 0.2s ease-in-out;
@@ -62,12 +62,26 @@ dt {
 
 /* Style page content */
 .main {
+  width: 75%;
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.back {
+  display: inline-block;          /* IMPORTANT for transform on links */
+  font-size: 20px;
+  outline: medium solid purple;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.back:hover {
+  transform: scale(1.1);          /* 10% bigger */
 }
