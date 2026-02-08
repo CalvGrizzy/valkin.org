@@ -57,6 +57,7 @@
 #c_widget {
     box-sizing: border-box;
     height: 100%;
+    width: 75%;
     overflow: auto;
     padding: 20px;
     background-image: url('sparkle-bg.gif'); /* F2U background provided by https://sadgrl.online/webmastery/downloads/tiledbgs */
