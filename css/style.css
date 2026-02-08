@@ -17,13 +17,13 @@ h6 {
   letter-spacing: 1px;
 }
 a {
-  color: #a14fff;
+  color: #4fb3ff;
   text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 a:hover {
-  color: #6c6fff;
-  text-shadow: 0 0 8px rgba(7, 0, 224, 0.778);
+  color: #6cf0ff;
+  text-shadow: 0 0 8px rgba(4, 151, 255, 0.778);
 }
 * {
   transition: all 0.2s ease-in-out;
@@ -81,8 +81,11 @@ dt {
   padding-left: 3px;
   padding-right: 3px;
   transition: transform 0.2s ease;
+  color: rgb(194, 0, 194);
 }
 
 .back:hover {
   transform: scale(1.1);          /* 10% bigger */
+  color: rgb(255, 0, 255);
+  text-shadow: 0 0 8px rgba(224, 0, 224, 0.5);
 }
