@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: black;
+  background-image: none; /* Explicitly remove any background image */
   color: #e000e0;
   margin: 0;
   padding: 0;

@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
-  background: white !important;
+  background: rgb(0, 0, 0) !important;
   background-image: none !important;
+  color: #e000e0;
 }
