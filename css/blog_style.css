@@ -1,7 +1,4 @@
-body {
-    background: none;
-}
-
-.container {
-    background: none;
+* {
+    background-color: black;
+    color: white;
 }
