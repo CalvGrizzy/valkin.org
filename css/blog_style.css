@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    background: radial-gradient(circle at center, rgb(0, 0, 0) 0, rgb(0, 0, 0), rgb(0, 0, 0), rgb(120, 0, 120), rgb(0, 120, 60) 100%); 
+    background: radial-gradient(circle at center, rgb(0, 0, 0) 0, rgb(0, 0, 0), rgb(0, 0, 0), rgb(120, 0, 120), rgb(255, 8, 8) 100%); 
     font-family: 'Poppins', sans-serif;
     color: #e000e0;
 }
