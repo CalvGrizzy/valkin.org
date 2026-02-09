@@ -4,3 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #e000e0;
 }
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
