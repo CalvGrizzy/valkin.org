@@ -161,7 +161,7 @@ dt {
 .button-wall img {
   display: block;
   max-width: 100%;
-  
+  height: auto;
 }
 
 /* Responsive adjustments */
