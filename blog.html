@@ -15,8 +15,7 @@
         <main class="main">
             <h2>Blog</h2>
             <h3>Mainly for just general updates and things I want to say and put out into the world</h3>
-            <iframe src='https://arpilmyroomim.neocities.org/embed/index.html?userId=eca9eb' frameborder='0'></iframe>
-        </main>
+<iframe src='https://arpilmyroomim.neocities.org/embed/index.html?userId=eca9eb&nocache=12945' frameborder='0'></iframe>        </main>
         
         <aside class="sidenav-right sidenav">
             
@@ -26,15 +25,19 @@
 </body>
 <script>
 const iframe = document.querySelector('iframe');
+
+// Add timestamp to iframe src to prevent caching
+const originalSrc = iframe.src;
+if (!originalSrc.includes('?')) {
+    iframe.src = originalSrc + '?reload=' + Date.now();
+} else {
+    iframe.src = originalSrc + '&reload=' + Date.now();
+}
+
 iframe.onload = function() {
-    const cssUrl = 'https://valkin.org/css/blog_style.css';
-    console.log('Attempting to send CSS URL:', cssUrl);
-    
     iframe.contentWindow.postMessage({
-        cssUrl: cssUrl
+        cssUrl: 'https://valkin.org/css/blog_style.css?v=' + Date.now()
     }, '*');
-    
-    console.log('Message sent!');
 };
 </script>
 </html>

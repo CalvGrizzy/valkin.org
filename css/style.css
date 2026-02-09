@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: black;
+  background-color: rgb(118, 118, 118);
   background-image: none; /* Explicitly remove any background image */
   color: #e000e0;
   margin: 0;
@@ -212,6 +212,12 @@ dt {
 }
 
 iframe {
-  width: 100%;
-  height: fit-content;
+    height: 70%;
+    width:100%;
+    overflow: auto;
+    padding: 20px;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
 }

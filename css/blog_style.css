@@ -1,20 +1,6 @@
 body {
-  font-family: 'Poppins', sans-serif !important;
-  background-color: black !important;
   background-image: none !important;
   color: #e000e0 !important;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-.container {
-  width: 80% !important;
-  margin-left: 10% !important;
-  margin-right: 10% !important;
-  display: flex !important;
-  min-height: 100vh !important;
 }
 
 .main {
@@ -25,6 +11,22 @@ body {
   box-sizing: border-box;
 }
 
-.sidebar {
-  display: none !important; /* Hide the embed's sidebar if you don't want it */
+.post {
+  background-color: #111;
+  color: #e000e0 !important;
+  outline-color: #7c7c7c;
+  outline-width: 4px;
+}
+
+.title {
+  background-color: #111;
+  color: white !important;
+}
+
+p {
+  color: white !important;
+}
+
+.metadata {
+  color: white !important;
 }
