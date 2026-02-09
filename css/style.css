@@ -211,3 +211,7 @@ dt {
   }
 }
 
+iframe {
+  width: 100%;
+  height: fit-content;
+}

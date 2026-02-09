@@ -1,5 +1,217 @@
-* {
-  background: rgb(0, 0, 0) !important;
-  background-image: none !important;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  background-image: none; /* Explicitly remove any background image */
   color: #e000e0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container for sidebars + main content (80% total) */
+.container {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left sidebar - 20% of the 80% container */
+.sidenav-left {
+  width: 20%;
+  background-color: #0d0d0d;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Main content - 60% of the 80% container (50% of total viewport) */
+.main {
+  width: 60%;
+  background-color: #111;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+/* Right sidebar - 20% of the 80% container */
+.sidenav-right {
+  width: 20%;
+  background-color: #0d0d0d;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Legacy .sidenav class - style both sidebars */
+.sidenav {
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  font-size: medium;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  text-shadow: 0 0 10px rgba(224, 0, 224, 0.5);
+  letter-spacing: 1px;
+}
+
+a {
+  color: #4fb3ff;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #6cf0ff;
+  text-shadow: 0 0 8px rgba(4, 151, 255, 0.778);
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+dd {
+  margin-left: 2em;
+  border-left: 2px solid rgba(224, 0, 224, 0.669);
+  padding-left: 1em;
+}
+
+dt {
+  color: rgb(0, 255, 128);
+  text-shadow: 0 0 8px rgba(0, 255, 128, 0.5);
+}
+
+.back {
+  display: inline-block;
+  text-align: center;
+  outline: medium solid purple;
+  outline-offset: -2px; /* Keeps outline inside the bounds */
+  padding: 8px 12px; /* Changed from padding-left/right for better centering */
+  transition: transform 0.2s ease;
+  color: rgb(194, 0, 194);
+  margin: 0 auto; /* Centers the element if it's in a block context */
+  max-width: fit-content;
+}
+
+.back:hover {
+  transform: scale(1.1);
+  color: rgb(255, 0, 255);
+  text-shadow: 0 0 8px rgba(224, 0, 224, 0.5);
+  outline: medium solid purple; /* Keeps outline the same size */
+}
+.dropdown {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  font-size: small;
+  margin-left: 10%;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.dropbtn {
+  color: rgb(0, 255, 128);
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: rgb(0, 255, 128);
+  text-shadow: 0 0 8px rgba(0, 255, 128, 0.737);
+}
+
+.button-wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.button-wall a {
+  display: inline-block;
+}
+
+.button-wall img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .sidenav-left,
+  .sidenav-right {
+    width: 15%;
+  }
+  
+  .main {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+  
+  .sidenav-left,
+  .sidenav-right {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .main {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav-left,
+  .sidenav-right {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: fit-content;
 }
