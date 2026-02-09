@@ -1,4 +1,7 @@
 * {
-  background: white !important;
-  background-image: none !important;
+    --text: #ffffff;
+    --background: #000000;
+    --primary: #2f27ce;
+    --secondary: #dedcff;
+    --accent: #433bff;
 }
