@@ -1,11 +1,6 @@
 body {
     background: white !important;
-    background-image: none !important;
+    background-image: linear-gradient(top, black, black);
     font-family: 'Poppins', sans-serif;
     color: #e000e0;
-}
-
-.container {
-    background: white !important;
-    background-image: none !important;
 }
