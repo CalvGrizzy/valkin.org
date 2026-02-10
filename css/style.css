@@ -224,3 +224,23 @@ details a {
   height: auto;
   background-color: aliceblue;
 }
+
+article h3 {
+  margin: 0%;
+  padding: 0%;
+  margin-left: 5%;
+}
+
+article h1 {
+  margin: 0%;
+}
+
+article {
+  border-width: 10%;
+  border-style: solid;
+  border-color: #4fb3ff;
+}
+
+.blog-post {
+  padding: 5%;
+}
