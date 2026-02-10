@@ -1,17 +1,15 @@
-function dropdown(button) {
-  var dropdown = button.nextElementSibling;
-  dropdown.classList.toggle("show");
+const THEME_PATH = 'css/';
+
+
+function changeTheme(stylesheet) {
+  document.getElementById('stylesheet').setAttribute('href', THEME_PATH + stylesheet);
+  console.log(THEME_PATH + stylesheet)
+  localStorage.setItem('selectedTheme', stylesheet);
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+window.onload = function() {
+  const savedTheme = localStorage.getItem('selectedTheme');
+  if (savedTheme) {
+    changeTheme(savedTheme);
   }
 }
