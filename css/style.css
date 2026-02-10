@@ -1,8 +1,38 @@
+:root {
+  /* Background colors */
+  --bg-body: rgb(118, 118, 118);
+  --bg-main: #111;
+  --bg-sidebar: #0d0d0d;
+  --bg-blog: aliceblue;
+  
+  /* Text colors */
+  --text-primary: #e000e0;
+  --text-white: white;
+  --text-link: #4fb3ff;
+  --text-link-hover: #6cf0ff;
+  --text-dt: rgb(0, 255, 128);
+  --text-summary: rgb(0, 255, 128);
+  --text-back: rgb(194, 0, 194);
+  --text-back-hover: rgb(255, 0, 255);
+  
+  /* Border colors */
+  --border-dd: rgba(224, 0, 224, 0.669);
+  --border-back: purple;
+  --border-article: #4fb3ff;
+  
+  /* Shadow colors */
+  --shadow-heading: rgba(224, 0, 224, 0.5);
+  --shadow-link: rgba(4, 151, 255, 0.778);
+  --shadow-dt: rgba(0, 255, 128, 0.5);
+  --shadow-summary: rgba(0, 255, 128, 0.737);
+  --shadow-back: rgba(224, 0, 224, 0.5);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: rgb(118, 118, 118);
+  background-color: var(--bg-body);
   background-image: none; /* Explicitly remove any background image */
-  color: #e000e0;
+  color: var(--text-primary);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -21,7 +51,7 @@ body {
 /* Left sidebar - 20% of the 80% container */
 .sidenav-left {
   width: 20%;
-  background-color: #0d0d0d;
+  background-color: var(--bg-sidebar);
   padding: 20px 10px;
   box-sizing: border-box;
   position: sticky;
@@ -33,7 +63,7 @@ body {
 /* Main content - 60% of the 80% container (50% of total viewport) */
 .main {
   width: 60%;
-  background-color: #111;
+  background-color: var(--bg-main);
   padding: 2em;
   box-sizing: border-box;
 }
@@ -41,7 +71,7 @@ body {
 /* Right sidebar - 20% of the 80% container */
 .sidenav-right {
   width: 20%;
-  background-color: #0d0d0d;
+  background-color: var(--bg-sidebar);
   padding: 20px 10px;
   box-sizing: border-box;
   position: sticky;
@@ -63,20 +93,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: white;
-  text-shadow: 0 0 10px rgba(224, 0, 224, 0.5);
+  color: var(--text-white);
+  text-shadow: 0 0 10px var(--shadow-heading);
   letter-spacing: 1px;
 }
 
 a {
-  color: #4fb3ff;
+  color: var(--text-link);
   text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover {
-  color: #6cf0ff;
-  text-shadow: 0 0 8px rgba(4, 151, 255, 0.778);
+  color: var(--text-link-hover);
+  text-shadow: 0 0 8px var(--shadow-link);
 }
 
 * {
@@ -85,32 +115,32 @@ a:hover {
 
 dd {
   margin-left: 2em;
-  border-left: 2px solid rgba(224, 0, 224, 0.669);
+  border-left: 2px solid var(--border-dd);
   padding-left: 1em;
 }
 
 dt {
-  color: rgb(0, 255, 128);
-  text-shadow: 0 0 8px rgba(0, 255, 128, 0.5);
+  color: var(--text-dt);
+  text-shadow: 0 0 8px var(--shadow-dt);
 }
 
 .back {
   display: inline-block;
   text-align: center;
-  outline: medium solid purple;
+  outline: medium solid var(--border-back);
   outline-offset: -2px; /* Keeps outline inside the bounds */
   padding: 8px 12px; /* Changed from padding-left/right for better centering */
   transition: transform 0.2s ease;
-  color: rgb(194, 0, 194);
+  color: var(--text-back);
   margin: 0 auto; /* Centers the element if it's in a block context */
   max-width: fit-content;
 }
 
 .back:hover {
   transform: scale(1.1);
-  color: rgb(255, 0, 255);
-  text-shadow: 0 0 8px rgba(224, 0, 224, 0.5);
-  outline: medium solid purple; /* Keeps outline the same size */
+  color: var(--text-back-hover);
+  text-shadow: 0 0 8px var(--shadow-back);
+  outline: medium solid var(--border-back); /* Keeps outline the same size */
 }
 
 /* Details/Summary styling (replaces dropdown) */
@@ -119,7 +149,7 @@ details {
 }
 
 summary {
-  color: rgb(0, 255, 128);
+  color: var(--text-summary);
   cursor: pointer;
   padding: 12px 16px;
   list-style: none; /* Removes default arrow */
@@ -142,8 +172,8 @@ details[open] summary::after {
 }
 
 summary:hover {
-  color: rgb(0, 255, 128);
-  text-shadow: 0 0 8px rgba(0, 255, 128, 0.737);
+  color: var(--text-summary);
+  text-shadow: 0 0 8px var(--shadow-summary);
 }
 
 details a {
@@ -222,7 +252,7 @@ details a {
 .blog {
   width: 100%;
   height: auto;
-  background-color: aliceblue;
+  background-color: var(--bg-blog);
 }
 
 article h3 {
@@ -238,7 +268,7 @@ article h1 {
 article {
   border-width: 10%;
   border-style: solid;
-  border-color: #4fb3ff;
+  border-color: var(--border-article);
 }
 
 .blog-post {
