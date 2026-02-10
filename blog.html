@@ -34,21 +34,5 @@
     </div>
 
 </body>
-<script>
-const iframe = document.querySelector('iframe');
-
-// Add timestamp to iframe src to prevent caching
-const originalSrc = iframe.src;
-if (!originalSrc.includes('?')) {
-    iframe.src = originalSrc + '?reload=' + Date.now();
-} else {
-    iframe.src = originalSrc + '&reload=' + Date.now();
-}
-
-iframe.onload = function() {
-    iframe.contentWindow.postMessage({
-        cssUrl: 'https://valkin.org/css/blog_style.css?v=' + Date.now()
-    }, '*');
-};
-</script>
+<script src="js/script.js"></script>
 </html>
