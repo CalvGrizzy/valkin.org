@@ -98,8 +98,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading);
   /* Classic 3D embossed effect */
   text-shadow: 
-    2px 2px 0 var(--shadow-text-dark),
-    3px 3px 2px var(--shadow-heading-dark);
+    0.5px 0.5px 0 var(--shadow-text-dark),
+    1px 1px 0 var(--shadow-text-dark),
+    1.5px 1.5px 0 var(--shadow-text-dark),
+    2px 2px 0 var(--shadow-text-dark);
+    
   letter-spacing: 0.5px;
   font-weight: bold;
 }
